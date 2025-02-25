@@ -1,4 +1,3 @@
-
 [
   {
     "train_id": "bacs",
@@ -10,17 +9,17 @@
       [0,0,0,0,0,0]
     ],
     "station_times": {
-      "Dhaka": "13:50:00",
-      "Bogura": "13:50:00",
-      "Rangpur": "13:50:00"
+      "bangalore": "13:50:00",
+      "jaipur": "13:50:00",
+      "delhi": "13:50:00"
     },
     "stations": [
-      "Dhaka",
-      "Bogura",
-      "Rangpur"
+      "bangalore",
+      "jaipur",
+      "delhi"
     ]
   },
-   {
+  {
     "train_id": "bacs",
     "train_no": 12345,
     "seats": [
@@ -30,14 +29,14 @@
       [0,0,0,0,0,0]
     ],
     "station_times": {
-      "Dhaka": "13:50:00",
-      "Bogura": "13:50:00",
-      "Rangpur": "13:50:00"
+      "bangalore": "13:50:00",
+      "jaipur": "13:50:00",
+      "delhi": "13:50:00"
     },
     "stations": [
-      "Dhaka",
-      "Bogura",
-      "Rangpur"
+      "bangalore",
+      "jaipur",
+      "delhi"
     ]
   }
 ]

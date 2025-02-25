@@ -1,16 +1,18 @@
 package ticket.booking.services;
 
+import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import ticket.booking.entities.Ticket;
 import ticket.booking.entities.Train;
 import ticket.booking.entities.User;
 import ticket.booking.util.UserServiceUtil;
-
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class UserBookingService{
 
@@ -95,7 +97,7 @@ public class UserBookingService{
 
     public List<Train> getTrains(String source, String destination){
         try{
-            TrainService trainService = new TrainService();
+            ticket.booking.service.TrainService trainService = new ticket.booking.service.TrainService();
             return trainService.searchTrains(source, destination);
         }catch(IOException ex){
             return new ArrayList<>();
@@ -108,7 +110,7 @@ public class UserBookingService{
 
     public Boolean bookTrainSeat(Train train, int row, int seat) {
         try{
-            TrainService trainService = new TrainService();
+            ticket.booking.service.TrainService trainService = new ticket.booking.service.TrainService();
             List<List<Integer>> seats = train.getSeats();
             if (row >= 0 && row < seats.size() && seat >= 0 && seat < seats.get(row).size()) {
                 if (seats.get(row).get(seat) == 0) {

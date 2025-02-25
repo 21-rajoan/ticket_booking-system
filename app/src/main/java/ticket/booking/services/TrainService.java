@@ -12,8 +12,8 @@ import java.util.OptionalInt;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class TrainService
-{
+public class TrainService {
+
     private List<Train> trainList;
     private ObjectMapper objectMapper = new ObjectMapper();
     private static final String TRAIN_DB_PATH = "../localDB/trains.json";
